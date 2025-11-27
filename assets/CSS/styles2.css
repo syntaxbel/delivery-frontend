@@ -1,0 +1,25 @@
+/* Células editáveis com feedback visual */
+td[contenteditable="true"]:hover {
+  background: #f0f9ff;
+  cursor: text;
+}
+
+td[contenteditable="true"]:focus {
+  outline: 2px solid #3b82f6;
+  outline-offset: -2px;
+  background: #fff;
+}
+
+/* Select de status */
+.status-select {
+  padding: 4px 10px;
+  border-radius: 999px;
+  border: 1px solid #e5e7eb;
+  font-size: 12px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.status-select:focus {
+  outline: 2px solid #3b82f6;
+}
