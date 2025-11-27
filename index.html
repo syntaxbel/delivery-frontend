@@ -5,92 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tela de Login</title>
 
-    <link href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600;700&display=swap" rel="stylesheet">
-
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            height: 90vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-
-            background: #000000; 
-            font-family: "Golos Text", sans-serif;
-        }
-
-        .login-box {
-            width: 450px;
-            background: #F5F5F5; 
-            padding: 45px;
-            border-radius: 40px;
-            box-shadow: 0 0 35px rgba(255, 230, 0, 0.25);
-            text-align: center;
-        }
-
-        .login-box h1 {
-            font-size: 28px;
-            font-weight: 600;
-            margin-bottom: 40px;
-            color: #000;
-            text-align: center;
-        }
-
-        .input-group {
-            margin-bottom: 35px;
-            text-align: center;
-        }
-
-        .input-group label {
-            font-size: 14px;
-            font-weight: 500;
-            color: #333;
-            margin-bottom: 5px;
-            display: block;
-        }
-
-        .input-group input {
-            width: 90%;
-            padding: 20px;
-            border: 2px solid #DCDCDC;
-            border-radius: 12px;
-            font-size: 15px;
-            outline: none;
-            transition: .3s;
-        }
-
-        .input-group input:focus {
-            border-color: #FFE600;
-            box-shadow: 0 0 5px #FFE600;
-        }
+    <link rel="stylesheet" href="assets/CSS/styles.css">
 
 
-
-        .btn-login {
-            width: 100%;
-            padding: 15px;
-            background: #FFE600; 
-            border: none;
-            border-radius: 12px;
-            font-size: 18px;
-            font-weight: 600;
-            cursor: pointer;
-            transition: .3s;
-        }
-
-        .btn-login:hover {
-            opacity: .8;
-        }
-
-        .logo {
-            height: 250px;
-            width: 300px;
-
-
-        }
-
-    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Gabarito:wght@400..900&family=Grand+Hotel&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Sacramento&family=Send+Flowers&display=swap" rel="stylesheet">
 
 </head>
 
@@ -98,7 +16,7 @@
 
     <div class="login-box">
 
-        <img src="imagens/logo.3.2.png" class="logo" alt= "Logo da empresa">
+        <img src="assets/imagens/logo.3.2.png" class="logo" alt= "Logo da empresa">
     <form>
         <div class="input-group">
             <label>E-mail</label>
@@ -106,13 +24,14 @@
         </div>
 
         <div class="input-group">
-            <label>Password</label>
+            <label>Senha</label>
             <input type="password" placeholder="Digite sua senha">
         </div>
 
 
 
-        <button class="btn-login">Login</button>
+        <a href="inicial.html">
+    <button type="button" class="btn-login">Login</button>    
     </form>
 
     </div>
