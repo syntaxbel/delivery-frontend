@@ -1,51 +1,106 @@
-body {
-    font-family: Arial, sans-serif;
-    background: #f5f5f5;
-    padding: 20px;
-}
+ /* --- CSS: O Estilo Visual --- */
+        body {
+            font-family: "Inter", sans-serif;
+            background-color: #f4f7fe; /* Cor de fundo suave */
+            margin: 0;
+            padding: 20px;
+        }
 
-h1 {
-    margin-bottom: 20px;
-}
+        /* Container principal estilo "Cartão" */
+        .dashboard-container {
+            background-color: white;
+            border-radius: 20px;
+            padding: 20px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            max-width: 1200px;
+            margin: 0 auto;
+        }
 
-table {
-    width: 100%;
-    border-collapse: collapse;
-    background: white;
-    border-radius: 8px;
-    overflow: hidden;
-}
+        /* Cabeçalho da Tabela (Título e Botão) */
+        .header-tools {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
 
-th, td {
-    padding: 14px;
-    text-align: left;
-    border-bottom: 1px solid #ebebeb;
-}
+        .header-tools h2 {
+            color: #2b3674;
+            margin: 0;
+        }
 
-th {
-    background: #fafafa;
-    font-weight: bold;
-}
+        .btn-add {
+            background-color: #111c44;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 10px;
+            cursor: pointer;
+            font-weight: bold;
+        }
 
-.status {
-    padding: 6px 10px;
-    border-radius: 14px;
-    font-size: 12px;
-    font-weight: bold;
-}
+        /* A Tabela em si */
+        table {
+            width: 100%;
+            border-collapse: collapse; /* Remove espaços entre as bordas */
+        }
 
-.pending {
-    background: #f4e3ff;
-    color: #a950d6;
-}
+        th {
+            text-align: left;
+            color: #a3aed0; /* Cor cinza para os títulos */
+            font-size: 14px;
+            padding: 15px;
+            border-bottom: 1px solid #e0e5f2;
+        }
 
-.active {
-    background: #d8f5dd;
-    color: #3ca45b;
-}
+        td {
+            padding: 15px;
+            color: #2b3674;
+            font-weight: 500;
+            border-bottom: 1px solid #f4f7fe;
+        }
 
-.inactive {
-    background: #ffdede;
-    color: #d64545;
-}
+        /* Estilo das Badges de Status (As etiquetas coloridas) */
+        .status-badge {
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: bold;
+            display: inline-block;
+        }
 
+        .status-aprovado {
+            background-color: #e6fdf2;
+            color: #05cd99;
+        }
+
+        .status-pendente {
+            background-color: #fff9ec;
+            color: #ffb547;
+        }
+
+        .status-cancelado {
+            background-color: #ffeeee;
+            color: #ee5d50;
+        }
+
+        /* Botões de Ação (Ícones) */
+        .action-btn {
+            background: none;
+            border: none;
+            cursor: pointer;
+            color: #a3aed0;
+            font-size: 16px;
+            margin-right: 10px;
+            transition: 0.3s;
+        }
+
+        .action-btn:hover {
+            color: #2b3674;
+        }
+
+        /* Checkbox customizado (simples) */
+        .custom-checkbox {
+            accent-color: #2b3674;
+            transform: scale(1.2);
+        }
