@@ -16,29 +16,84 @@
 </head>
 <body>
 
-    <div class="dashboard-container">
-        <div class="header-tools">
-            <div>
-                <h2>Lista de Entregas</h2>
-                <p style="color: #a3aed0; font-size: 14px;">Gerencie o status das suas entregas recentes</p>
-            </div>
-            <button class="btn-add">+  Entrega</button>
+<nav class="sidebar">
+        <div class="logo">
+        <img src="assets/imagens/logo.3.2.png" class="logo" alt= "Logo da empresa">
         </div>
 
-        <table>
-            <thead>
-                <tr>
-                    <th style="width: 50px;"><input type="checkbox" class="custom-checkbox"></th>
-                    <th>Destinatário</th>
-                    <th>ID Pedido</th>
-                    <th>Data Prevista</th>
-                    <th>Status</th>
-                    <th>Ações</th>
-                </tr>
-            </thead>
-            <tbody id="tabela-corpo">
-                </tbody>
-        </table>
+        <button class="btn-icone" onclick="abrirModal()">
+            <img src="assets/imagens/icon.mais.png" alt="Adicionar nova entrega" class="icon-adicionar">
+        </button>
+
+        <button class="btn-icone" id="btnEditarSidebar">
+            <img src="assets/imagens/pencil.png" alt="Editar informação" class="icon-editar">
+        </button>
+
+
+        
+    </nav>
+
+    
+
+
+    <main class="main-content">
+        <div class="dashboard-card">
+            <h2>Gerenciamento de Entregas</h2>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Transportadora</th>
+                        <th>ID Pedido</th>
+                        <th>Data</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody id="tabela-corpo">
+                    </tbody>
+            </table>
+        </div>
+    </main>
+
+
+    <div class="modal-overlay" id="modalAdicionar">
+        <div class="modal-box">
+            <h3 style="color: #000000; margin-top: 0;">Nova Entrega</h3>
+            
+            <form id="formEntrega">
+                <div class="form-group">
+                    <label>Empresas</label>
+                    <input type="text" id="inputNome" required>
+                </div>
+                <div class="form-group">
+                    <label>ID do Pedido</label>
+                    <input type="text" id="inputID" placeholder="Ex: RCS-99" required>
+                </div>
+                <div class="form-group">
+                    <label>Data</label>
+                    <input type="date" id="inputData" required>
+                </div>
+                <div class="form-group">
+                    <label>Status</label>
+                    <select id="inputStatus">
+                        <option value="Embalado">Embalado</option>
+                        <option value="Transportando">Transportando</option>
+                        <option value="Entregado">Entregado</option>
+                        <option value="Interrompido">Interrompido</option>
+                    </select>
+                </div>
+
+                <div class="modal-buttons">
+                    <button type="button" class="btn-cancel" onclick="fecharModal()">Cancelar</button>
+                    <button type="submit" class="btn-confirm">Salvar</button>
+                </div>
+            </form>
+        </div>
     </div>
+
+
+    <script src="assets/JS/script.js"></script>
+
+    
 </body>
 </html>
