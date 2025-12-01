@@ -1,32 +1,30 @@
-// --- JAVASCRIPT ---
+
 
 let entregas = [];
 let indiceEdicao = -1;
 
-// NOVA VARIÁVEL: Guarda qual linha foi clicada (-1 significa nenhuma)
+
 let indiceSelecionado = -1;
 
-// Elementos
+
 const modal = document.getElementById("modalAdicionar");
 const tbody = document.getElementById("tabela-corpo");
 const form = document.getElementById("formEntrega");
 const tituloModal = document.querySelector(".modal-box h3");
-const btnEditarSidebar = document.getElementById("btnEditarSidebar"); // O botão da navbar
+const btnEditarSidebar = document.getElementById("btnEditarSidebar"); 
 
-// --- INTERAÇÃO COM A NAVBAR ---
 
-// Quando clica no botão "Editar" da barra lateral
 btnEditarSidebar.addEventListener("click", function() {
     if (indiceSelecionado === -1) {
         alert("Por favor, clique em uma linha da tabela para selecionar primeiro.");
     } else {
-        // Se tiver alguém selecionado, abre a edição para ele
+        
         prepararEdicao(indiceSelecionado);
     }
 });
 
 
-// --- FUNÇÕES DE MODAL ---
+
 
 function abrirModal() {
     modal.style.display = "flex";
@@ -39,21 +37,10 @@ function fecharModal() {
     tituloModal.innerText = "Nova Entrega";
 }
 
-// --- FUNÇÕES DE LÓGICA ---
 
-// Função chamada ao clicar numa linha da tabela
-// Função chamada ao clicar numa linha da tabela
+
 function selecionarLinha(index) {
-    // LÓGICA DE TOGGLE (ALTERNAR)
-    if (indiceSelecionado === index) {
-        // Se eu cliquei na mesma linha que já estava marcada, eu desmarco.
-        indiceSelecionado = -1; 
-    } else {
-        // Se eu cliquei numa linha nova, eu marco essa nova.
-        indiceSelecionado = index;
-    }
-
-    // Recarrega a tabela para atualizar as cores (adicionar ou remover o cinza)
+    indiceSelecionado = index;
     carregarTabela(); 
 }
 
@@ -73,7 +60,7 @@ function prepararEdicao(index) {
 function excluirEntrega(index) {
     if(confirm("Tem certeza?")) {
         entregas.splice(index, 1);
-        indiceSelecionado = -1; // Limpa a seleção se excluir
+        indiceSelecionado = -1; 
         carregarTabela();
     }
 }
@@ -86,7 +73,7 @@ function obterClasseStatus(status) {
     return "";
 }
 
-// --- SUBMIT ---
+
 
 form.addEventListener("submit", function(event) {
     event.preventDefault();
@@ -108,7 +95,6 @@ form.addEventListener("submit", function(event) {
     fecharModal();
 });
 
-// --- RENDERIZAÇÃO ---
 
 function carregarTabela() {
     tbody.innerHTML = "";
@@ -121,10 +107,10 @@ function carregarTabela() {
     entregas.forEach((entrega, index) => {
         const classeCor = obterClasseStatus(entrega.status);
         
-        // Verifica se esta é a linha selecionada para aplicar a classe CSS
+       
         const classeSelecionada = (index === indiceSelecionado) ? "selecionada" : "";
 
-        // Adicionei onclick="selecionarLinha(${index})" na tag <tr>
+        
         const linha = `
             <tr class="${classeSelecionada}" onclick="selecionarLinha(${index})">
                 <td><strong>${entrega.nome}</strong></td>
