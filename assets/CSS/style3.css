@@ -1,0 +1,99 @@
+ body {
+            font-family: 'Inter', sans-serif;
+            background-color: #000000;
+            margin: 0;
+            display: flex;
+            justify-content: center; 
+            align-items: center;     
+            height: 100vh;           
+        }
+
+        
+        .form-card {
+            background-color: white;
+            padding: 40px;
+            border-radius: 20px;
+            width: 100%;
+            max-width: 500px; 
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+
+        h2 {
+            color: #000000;
+            margin-top: 0;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        /* Estilo dos campos */
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #000000;
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+       
+        input[type="text"] {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #e0e5f2;
+            border-radius: 10px;
+            box-sizing: border-box; 
+            outline: none;
+        }
+
+        
+        textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #e0e5f2;
+            border-radius: 10px;
+            box-sizing: border-box;
+            outline: none;
+            resize: vertical; 
+            font-family: 'Inter', sans-serif; 
+        }
+
+        
+        input:focus, textarea:focus {
+            border-color: #000000;
+        }
+
+        /* Botões */
+        .btn-group {
+            display: flex;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .btn-enviar {
+            background-color: #FFE600;
+            color: rgb(0, 0, 0);
+            border: none;
+            padding: 12px 20px;
+            border-radius: 10px;
+            cursor: pointer;
+            font-weight: bold;
+            flex: 1; 
+        }
+
+        .btn-voltar {
+            background-color: #f4f7fe;
+            color: #000000;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 10px;
+            cursor: pointer;
+            font-weight: bold;
+            text-decoration: none; 
+            text-align: center;
+        }
+
+        .btn-enviar:hover { opacity: 0.9; }
+        .btn-voltar:hover { background-color: #e0e5f2; }

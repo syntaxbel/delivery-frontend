@@ -153,3 +153,59 @@
         .modal-buttons { display: flex; justify-content: flex-end; gap: 10px; margin-top: 20px; }
         .btn-cancel { background: #ffeeee; color: #f51400e1; border: none; padding: 10px 20px; border-radius: 10px; cursor: pointer; }
         .btn-confirm { background: #FFE600; color: rgb(0, 0, 0); border: none; padding: 10px 20px; border-radius: 10px; cursor: pointer; }
+
+
+
+
+
+    
+        @media (max-width: 768px) {
+            
+        
+            body {
+                flex-direction: column;
+                height: auto; 
+            }
+
+            .sidebar {
+                width: 100%;       
+                height: auto;      
+                border-right: none;
+                border-bottom: 1px solid #e0e5f2;
+                padding: 10px;
+                box-sizing: border-box; 
+                
+                
+                flex-direction: row; 
+                overflow-x: auto; 
+                align-items: center;
+                gap: 15px;
+            }
+
+            
+            .menu-btn {
+                font-size: 14px;
+                white-space: nowrap; 
+            }
+
+            
+            .main-content {
+                padding: 15px;
+                width: 100%;
+                box-sizing: border-box;
+            }
+
+            
+            .tabela-responsiva {
+                overflow-x: auto; 
+                width: 100%;
+                display: block;
+            }
+
+            
+            .modal-box {
+                width: 90%; 
+                margin: 10px;
+            }
+        }
+            
