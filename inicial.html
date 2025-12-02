@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rastreamento</title>
+    <link rel="stylesheet" href="assets/CSS/style2.css">
+    <link href="https://fonts.googleapis.com/css2?family=Gabarito:wght@400..900&family=Grand+Hotel&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Sacramento&family=Send+Flowers&display=swap" rel="stylesheet">
+    <link rel="icon" href="assets/imagens/icon.pag.princ.png" type="image/png">
+
+</head>
+<body>
+
+<nav class="sidebar">
+        <div class="logo">
+        <img src="assets/imagens/logo.3.png" alt= "Logo da empresa" class="logo"> 
+        </div>
+
+        <button class="btn-icone" onclick="abrirModal()">
+            <img src="assets/imagens/icon.mais.pintado.png" alt="Adicionar nova entrega" class="icon-adicionar">
+        </button>
+
+        <button class="btn-icone" id="btnEditarSidebar">
+            <img src="assets/imagens/icon.editar.pintado.png" alt="Editar informação" class="icon-editar">
+        </button>
+
+        
+         <button class="btn-icone" onclick="window.location.href='paginaSAC.html'"> 
+            <img src="assets/imagens/icon.assistência1.png" alt="Acessar o SAC" class="icon-assistencia">
+        </button>
+        
+    </nav>
+
+    
+    <main class="main-content">
+        <div class="dashboard-card">
+            <h2>Gerenciamento de Entregas</h2>
+
+            <div class="tabela-responsiva">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Transportadora</th>
+                        <th>ID Pedido</th>
+                        <th>Data</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody id="tabela-corpo">
+                    </tbody>
+            </table>
+        </div>
+        </div>
+    </main>
+    
+
+    <div class="modal-overlay" id="modalAdicionar">
+        <div class="modal-box">
+            <h3 style="color: #000000; margin-top: 0;">Nova Entrega</h3>
+            
+            <form id="formEntrega">
+                <div class="form-group">
+                    <label>Empresas</label>
+                    <input type="text" id="inputNome" required>
+                </div>
+                <div class="form-group">
+                    <label>ID do Pedido</label>
+                    <input type="text" id="inputID" placeholder="Ex: RCS-99" required>
+                </div>
+                <div class="form-group">
+                    <label>Data</label>
+                    <input type="date" id="inputData" required>
+                </div>
+                <div class="form-group">
+                    <label>Status</label>
+                    <select id="inputStatus">
+                        <option value="Embalado">Embalado</option>
+                        <option value="Transportando">Transportando</option>
+                        <option value="Entregado">Entregado</option>
+                        <option value="Interrompido">Interrompido</option>
+                    </select>
+                </div>
+
+                <div class="modal-buttons">
+                    <button type="button" class="btn-cancel" onclick="fecharModal()">Cancelar</button>
+                    <button type="submit" class="btn-confirm">Salvar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+    <script src="assets/JS/script.js"></script>
+
+    
+</body>
+</html>
