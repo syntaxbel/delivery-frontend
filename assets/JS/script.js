@@ -93,6 +93,8 @@ form.addEventListener("submit", function(event) {
 
     carregarTabela();
     fecharModal();
+
+    mostrarMensagemSucesso(); 
 });
 
 
@@ -128,5 +130,17 @@ function carregarTabela() {
         tbody.innerHTML += linha;
     });
 }
+
+        function mostrarMensagemSucesso() {
+            const msg = document.getElementById("msgSucesso");
+            
+            // Mostra a mensagem
+            msg.style.display = "block";
+
+            // Esconde a mensagem automaticamente após 3 segundos (3000 milissegundos)
+            setTimeout(function() {
+                msg.style.display = "none";
+            }, 3000);
+        }
 
 carregarTabela();

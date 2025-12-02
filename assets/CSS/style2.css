@@ -156,7 +156,27 @@
 
 
 
+        /* Estilo da mensagem de sucesso */
+        .msg-sucesso {
+            display: none; /* Começa invisível */
+            position: fixed; /* Fica fixo na tela mesmo se rolar */
+            top: 20px; /* Distância do topo */
+            right: 20px; /* Distância da direita */
+            background-color: #4CAF50; /* Verde sucesso */
+            color: white; /* Texto branco */
+            padding: 15px 25px;
+            border-radius: 10px; /* Bordas arredondadas */
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Sombra suave */
+            z-index: 1001; /* Garante que fica por cima de tudo */
+            font-weight: bold;
+            animation: aparecer 0.5s ease-in-out;
+        }
 
+        /* Animação suave (opcional, mas fica bonito) */
+        @keyframes aparecer {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
 
     
         @media (max-width: 768px) {
