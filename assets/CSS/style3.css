@@ -1,4 +1,4 @@
- body {
+        body {
             font-family: 'Inter', sans-serif;
             background-color: #000000;
             margin: 0;
@@ -8,7 +8,7 @@
             height: 100vh;           
         }
 
-        
+        /* Configuração referente a caixa de preenchimento */
         .form-card {
             background-color: white;
             padding: 40px;
@@ -72,6 +72,7 @@
             margin-top: 20px;
         }
 
+        /* Configuração referente ao botão de Enviar */
         .btn-enviar {
             background-color: #FFE600;
             color: rgb(0, 0, 0);
@@ -82,7 +83,7 @@
             font-weight: bold;
             flex: 1; 
         }
-
+        /* Configuração referente ao botão de Voltar */
         .btn-voltar {
             background-color: #f4f7fe;
             color: #000000;
@@ -98,6 +99,7 @@
         .btn-enviar:hover { opacity: 0.9; }
         .btn-voltar:hover { background-color: #e0e5f2;}
 
+        /* Configuração referente a responsividade */
         @media (max-width: 480px) {
     .form-card {
         padding: 25px 20px;

@@ -1,5 +1,4 @@
-        
-        /* Confirguração referente a tela em geral */
+        /* Configuração referente a tela em geral */
         body {
             margin: 0;
             padding: 0;
@@ -12,7 +11,7 @@
             font-family: "Inter", sans-serif;
         }
         
-        /* Confirguração referente a caixa de login */
+        /* Configuração referente a caixa de login */
         .login-box {
             width: 450px;
             background: #F5F5F5; 
@@ -23,13 +22,13 @@
         }
 
         
-    
-
+        /* Configuração referente ao campo de escrita */
         .input-group {
             margin-bottom: 35px;
             text-align: center;
         }
 
+        /* Configuração referente ao pequeno texto dentro do campo de escrita */
         .input-group label {
             font-size: 14px;
             font-weight: 500;
@@ -38,6 +37,7 @@
             display: block;
         }
 
+        /* Configuração referente ao click do mouse sobre o campo de escrita */
         .input-group input {
             width: 90%;
             padding: 20px;
@@ -48,13 +48,14 @@
             transition: .3s;
         }
 
+
         .input-group input:focus {
             border-color: #FFE600;
             box-shadow: 0 0 5px #FFE600;
         }
 
 
-
+        /* Configuração referente ao botão de login */
         .btn-login {
             width: 100%;
             padding: 15px;
@@ -67,10 +68,12 @@
             transition: .3s;
         }
 
+        /* Configuração referente ao mouse sobre ao campo de escrita */
         .btn-login:hover {
             opacity: .8;
         }
 
+        /* Configuração referente ao png da logo */
         .logo {
             height: 200px;
             width: 350px;
@@ -78,7 +81,7 @@
 
         }
 
-        
+        /* Configuração referente a responsividade */
         @media (max-width: 350px) {
             .login-box {
                 padding: 30px 20px;

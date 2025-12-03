@@ -1,19 +1,18 @@
-
-
+/* Tabela começa vazia */
 let entregas = [];
 let indiceEdicao = -1;
 
-
+/* Nenhuma linha é selecionada */
 let indiceSelecionado = -1;
 
-
+/* Conexão dos elementos do html */
 const modal = document.getElementById("modalAdicionar");
 const tbody = document.getElementById("tabela-corpo");
 const form = document.getElementById("formEntrega");
 const tituloModal = document.querySelector(".modal-box h3");
 const btnEditarSidebar = document.getElementById("btnEditarSidebar"); 
 
-
+/* Configurações referentes ao botão de editar. Caso nenhuma linha da tabela for selecionada, emissão do alerta */
 btnEditarSidebar.addEventListener("click", function() {
     if (indiceSelecionado === -1) {
         alert("Por favor, clique em uma linha da tabela para selecionar primeiro.");
@@ -25,7 +24,7 @@ btnEditarSidebar.addEventListener("click", function() {
 
 
 
-
+/* Configurações referentes a caixa de preenchimento da tabela */
 function abrirModal() {
     modal.style.display = "flex";
 }
@@ -38,12 +37,13 @@ function fecharModal() {
 }
 
 
-
+/* Configurações referentes a ação de selecionar para editar */
 function selecionarLinha(index) {
     indiceSelecionado = index;
     carregarTabela(); 
 }
 
+/* Configurações referentes a ação de editar */
 function prepararEdicao(index) {
     indiceEdicao = index;
     const entrega = entregas[index];
@@ -57,6 +57,7 @@ function prepararEdicao(index) {
     abrirModal();
 }
 
+/* Configurações referentes a ação de excluir uma linha  */
 function excluirEntrega(index) {
     if(confirm("Tem certeza?")) {
         entregas.splice(index, 1);
@@ -65,6 +66,7 @@ function excluirEntrega(index) {
     }
 }
 
+/* Configurações referentes a coluna de status, cores. */
 function obterClasseStatus(status) {
     if (status === "Embalado") return "status-embalado";
     if (status === "Transportando") return "status-transportando";
@@ -74,7 +76,7 @@ function obterClasseStatus(status) {
 }
 
 
-
+/* Configurações referentes a entrega das informações do input na tabela */
 form.addEventListener("submit", function(event) {
     event.preventDefault();
 
@@ -97,7 +99,7 @@ form.addEventListener("submit", function(event) {
     mostrarMensagemSucesso(); 
 });
 
-
+/* Configurações referentes a ação de editar, caso usado, ou de nova */
 function carregarTabela() {
     tbody.innerHTML = "";
 
@@ -130,7 +132,7 @@ function carregarTabela() {
         tbody.innerHTML += linha;
     });
 }
-
+/* Configurações referentes a mensagem de registro feito com sucesso */
         function mostrarMensagemSucesso() {
             const msg = document.getElementById("msgSucesso");
             
@@ -143,4 +145,5 @@ function carregarTabela() {
             }, 3000);
         }
 
+/* Configurações referentes a tabela vazia, uma vez que carregada a tela novamente */
 carregarTabela();
